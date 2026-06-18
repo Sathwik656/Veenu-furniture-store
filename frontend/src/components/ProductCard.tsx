@@ -10,7 +10,10 @@ interface ProductCardProps {
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
   return (
-    <motion.div
+    <motion.a
+      href={product.link}
+      target="_blank"
+      rel="noopener noreferrer"
       initial={{ opacity: 0, y: 20 }}
       whileInView={{ opacity: 1, y: 0 }}
       viewport={{ once: true, margin: "100px" }}
@@ -32,16 +35,13 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         )}
 
         {/* Quick View Button overlay */}
-        <a 
-          href={product.link}
-          target="_blank"
-          rel="noopener noreferrer"
-          className="absolute bottom-0 left-0 w-full translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-brand-500/95 text-white flex justify-center items-center py-2.5 backdrop-blur-md cursor-pointer hover:bg-brand-600"
+        <div 
+          className="absolute bottom-0 left-0 w-full translate-y-0 lg:translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-brand-500/95 text-white flex justify-center items-center py-2.5 backdrop-blur-md cursor-pointer hover:bg-brand-600"
         >
           <span className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
             View Details
           </span>
-        </a>
+        </div>
       </div>
 
       <div className="flex justify-between items-start mt-auto">
@@ -53,6 +53,6 @@ export default function ProductCard({ product, index = 0 }: ProductCardProps) {
         </div>
         <span className="font-serif font-bold text-brand-900">₹{product.price}</span>
       </div>
-    </motion.div>
+    </motion.a>
   );
 }
