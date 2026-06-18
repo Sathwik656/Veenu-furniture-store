@@ -1,0 +1,6 @@
+{
+  "name": "Veenu Furnitures",
+  "description": "Premium furniture retail brand providing high-quality furniture for homes and offices.",
+  "requestFramePermissions": [],
+  "majorCapabilities": ["MAJOR_CAPABILITY_SERVER_SIDE_GEMINI_API"]
+}
