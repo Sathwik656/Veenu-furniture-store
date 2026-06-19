@@ -25,10 +25,10 @@ export default function Navbar() {
 
   return (
     <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-brand-200 ${isScrolled ? 'bg-white/90 backdrop-blur-md h-16' : 'bg-white/80 backdrop-blur-md h-20'
-        } flex items-center`}
+      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-brand-200 ${isScrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'
+        }`}
     >
-      <div className="w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center">
+      <div className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
         <Link to="/" className="flex items-center group">
           <img
             src="/images/logo.png"
