@@ -1,7 +1,8 @@
 import { useState, useEffect } from 'react';
-import { Menu, X, ShoppingBag, User } from 'lucide-react';
+import { Menu, X, ShoppingBag, User, MessageCircle } from 'lucide-react';
 import { motion, AnimatePresence } from 'motion/react';
 import { Link, useLocation } from 'react-router-dom';
+import { FaWhatsapp } from "react-icons/fa";
 
 export default function Navbar() {
   const [isScrolled, setIsScrolled] = useState(false);
@@ -24,10 +25,11 @@ export default function Navbar() {
   ];
 
   return (
-    <nav
-      className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-brand-200 ${isScrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'
-        }`}
-    >
+    <>
+      <nav
+        className={`fixed top-0 left-0 w-full z-50 transition-all duration-300 border-b border-brand-200 ${isScrolled ? 'bg-white/90 backdrop-blur-md' : 'bg-white/80 backdrop-blur-md'
+          }`}
+      >
       <div className={`w-full max-w-7xl mx-auto px-4 sm:px-6 lg:px-10 flex justify-between items-center transition-all duration-300 ${isScrolled ? 'h-16' : 'h-20'}`}>
         <Link to="/" className="flex items-center group">
           <img
@@ -72,10 +74,16 @@ export default function Navbar() {
           </div>
         </div>
 
-        <div className="hidden md:flex items-center space-x-6">
-          <button className="text-brand-800 hover:text-brand-500 transition-colors">
-            <User className="w-5 h-5" />
-          </button>
+        <div className="hidden md:flex items-center">
+          <a
+            href="https://wa.me/7795505525"
+            target="_blank"
+            rel="noopener noreferrer"
+            className="flex items-center gap-2 bg-[#25D366] hover:bg-[#1EBE5D] text-white px-5 py-2.5 rounded-full shadow-lg transition-all duration-300 hover:scale-105"
+          >
+            <FaWhatsapp className="text-xl" />
+            <span className="font-semibold">Chat with Us</span>
+          </a>
         </div>
 
         {/* Mobile Toggle */}
@@ -121,6 +129,16 @@ export default function Navbar() {
           </motion.div>
         )}
       </AnimatePresence>
-    </nav>
+      </nav>
+      {/* Mobile Floating WhatsApp Button */}
+      <a
+        href="https://wa.me/7795505525"
+        target="_blank"
+        rel="noopener noreferrer"
+        className="md:hidden fixed bottom-6 right-6 z-50 flex items-center justify-center w-14 h-14 bg-[#25D366] text-white rounded-full shadow-2xl transition-all duration-300 hover:scale-110"
+      >
+        <FaWhatsapp className="text-3xl" />
+      </a>
+    </>
   );
 }
