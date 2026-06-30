@@ -14,7 +14,7 @@ export default function Footer() {
             </p>
             <div className="flex space-x-4">
               <a href="https://www.instagram.com/veenu_furnitures/" className="hover:text-white transition-colors" target="_blank"><Instagram className="w-5 h-5" /></a>
-              <a href="https://www.facebook.com/profile.php?id=61591107343041" className="hover:text-white transition-colors" target="_blank"><Facebook className="w-5 h-5" /></a>
+              <a href="https://www.facebook.com/Veenufurniture" className="hover:text-white transition-colors" target="_blank"><Facebook className="w-5 h-5" /></a>
               <a href="#" className="hover:text-white transition-colors" target="_blank"><Twitter className="w-5 h-5" /></a>
             </div>
           </div>
