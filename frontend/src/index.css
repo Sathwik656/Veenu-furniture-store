@@ -3,8 +3,8 @@
 
 @theme {
   --font-sans: "Inter", ui-sans-serif, system-ui, sans-serif;
-  --font-serif: "Playfair+Display", ui-serif, Georgia, serif;
-  
+  --font-serif: "Playfair Display", ui-serif, Georgia, serif;
+
   --color-brand-50: #FDFCFB;
   --color-brand-100: #F4F1ED;
   --color-brand-200: #E5E7EB;
@@ -12,6 +12,8 @@
   --color-brand-600: #744D31;
   --color-brand-800: #44403C;
   --color-brand-900: #1C1917;
+
+  --spacing-section: 6rem;
 }
 
 html {
@@ -21,4 +23,38 @@ html {
 body {
   background-color: var(--color-brand-50);
   color: var(--color-brand-800);
+}
+
+::selection {
+  background-color: var(--color-brand-500);
+  color: white;
+}
+
+:focus-visible {
+  outline: 2px solid var(--color-brand-500);
+  outline-offset: 2px;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  html {
+    scroll-behavior: auto;
+  }
+}
+
+@layer components {
+  .container-site {
+    @apply mx-auto w-full max-w-7xl px-4 sm:px-6 lg:px-8;
+  }
+
+  .btn-primary {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 bg-brand-500 text-white text-xs font-bold uppercase tracking-widest hover:bg-brand-600 transition-colors;
+  }
+
+  .btn-outline {
+    @apply inline-flex items-center justify-center gap-2 px-8 py-4 border border-brand-900/25 text-brand-900 text-xs font-bold uppercase tracking-widest hover:bg-brand-900 hover:text-white transition-colors;
+  }
+
+  .eyebrow {
+    @apply text-[11px] font-semibold uppercase tracking-[0.2em] text-brand-500;
+  }
 }

@@ -7,6 +7,7 @@ export interface Product {
   imageUrl: string;
   link: string;
   featured?: boolean;
+  features?: string[];
 }
 
 export interface Testimonial {
@@ -15,4 +16,15 @@ export interface Testimonial {
   product: string;
   content: string;
   rating: number;
+}
+
+export interface NewsPost {
+  slug: string;
+  title: string;
+  excerpt: string;
+  date: string;
+  category: string;
+  image: string;
+  imageAlt: string;
+  paragraphs: string[];
 }

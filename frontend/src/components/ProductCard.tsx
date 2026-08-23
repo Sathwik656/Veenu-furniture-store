@@ -1,58 +1,47 @@
-import React from 'react';
+import { Link } from 'react-router-dom';
 import { motion } from 'motion/react';
+import { ArrowUpRight } from 'lucide-react';
 import { Product } from '../types';
 
 interface ProductCardProps {
   product: Product;
   index?: number;
-  key?: React.Key;
 }
 
 export default function ProductCard({ product, index = 0 }: ProductCardProps) {
   return (
-    <motion.a
-      href={product.link}
-      target="_blank"
-      rel="noopener noreferrer"
-      initial={{ opacity: 0, y: 20 }}
+    <motion.div
+      initial={{ opacity: 0, y: 24 }}
       whileInView={{ opacity: 1, y: 0 }}
-      viewport={{ once: true, margin: "100px" }}
-      transition={{ duration: 0.5, delay: index * 0.1 }}
-      className="bg-white border border-brand-200 p-4 rounded-sm flex flex-col group cursor-pointer hover:shadow-xl hover:shadow-brand-200/50 transition-all h-full"
+      viewport={{ once: true, margin: '-60px' }}
+      transition={{ duration: 0.5, delay: (index % 4) * 0.08 }}
     >
-      <div className="flex-1 bg-brand-100 rounded-sm mb-4 flex items-center justify-center relative overflow-hidden aspect-[4/3]">
-        <img
-          src={product.imageUrl}
-          alt={product.name}
-          className="w-full h-full object-cover transition-transform duration-700 group-hover:scale-105"
-        />
-        <div className="absolute inset-0 bg-brand-900/10 opacity-0 group-hover:opacity-100 transition-opacity duration-300" />
-
-        {product.featured && (
-          <span className="absolute top-3 left-3 text-[10px] font-bold uppercase bg-white text-brand-900 px-2 py-1 rounded-sm shadow-sm">
-            Featured
-          </span>
-        )}
-
-        {/* Quick View Button overlay */}
-        <div 
-          className="absolute bottom-0 left-0 w-full translate-y-0 lg:translate-y-full group-hover:translate-y-0 transition-transform duration-300 bg-brand-500/95 text-white flex justify-center items-center py-2.5 backdrop-blur-md cursor-pointer hover:bg-brand-600"
-        >
-          <span className="text-xs font-bold uppercase tracking-widest flex items-center gap-2">
+      <Link
+        to={`/products/${product.id}`}
+        className="group flex h-full flex-col bg-white border border-brand-200 hover:border-brand-500/50 hover:shadow-xl hover:shadow-brand-900/5 transition-all duration-300"
+      >
+        <div className="relative aspect-[4/3] overflow-hidden bg-brand-100">
+          <img
+            src={product.imageUrl}
+            alt={product.name}
+            loading="lazy"
+            className="h-full w-full object-cover transition-transform duration-700 group-hover:scale-105"
+          />
+          <span className="absolute bottom-0 left-0 flex w-full translate-y-full items-center justify-center gap-1.5 bg-brand-900/90 py-2.5 text-[11px] font-bold uppercase tracking-widest text-white backdrop-blur-sm transition-transform duration-300 group-hover:translate-y-0">
             View Details
+            <ArrowUpRight className="w-3.5 h-3.5" />
           </span>
         </div>
-      </div>
-
-      <div className="flex justify-between items-start mt-auto">
-        <div>
-          <h3 className="font-semibold text-sm text-brand-900">{product.name}</h3>
-          <p className="text-[10px] text-brand-800/50 uppercase tracking-widest mt-1">
-            {product.category}
-          </p>
+        <div className="flex items-start justify-between gap-4 p-5">
+          <div>
+            <h3 className="font-medium text-sm text-brand-900">{product.name}</h3>
+            <p className="mt-1 text-[11px] uppercase tracking-[0.15em] text-brand-800/50">{product.category}</p>
+          </div>
+          <span className="font-serif text-lg text-brand-900 whitespace-nowrap">
+            ₹{product.price.toLocaleString('en-IN')}
+          </span>
         </div>
-        <span className="font-serif font-bold text-brand-900">₹{product.price}</span>
-      </div>
-    </motion.a>
+      </Link>
+    </motion.div>
   );
 }
