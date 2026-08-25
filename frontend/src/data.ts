@@ -134,7 +134,7 @@ export const products: Product[] = [
     category: 'Ironing Board',
     price: 1999,
     description:
-      'Veenu Extra Large Ironing Board/Stand/Table, perfectly designed for home and commercial use. Comes with an attached iron holder and rubberised feet for better grip and stability. Lightweight and easy to carry, with a foldable design and 4 levels of adjustable height. Stable and durable with a 3-year warranty. Made in India by Veenu, a trusted furniture brand since 1984 with South India’s largest furniture showroom. Note: Design on the ironing surface is subject to variation.',
+      'Veenu Extra Large Ironing Board with attached iron holder. Foldable, lightweight and easy to carry, with 4 adjustable height levels, rubberised feet and a durable design. Comes with a 3-year warranty.',
     imageUrl: '/images/ironing_stand.webp',
     link: 'https://www.flipkart.com/veenu-ironing-stand-extra-wide-attached-iron-holder-durable-3-years-warranty-board/p/itmfe7u3hvzzcyzw',
     features: [
