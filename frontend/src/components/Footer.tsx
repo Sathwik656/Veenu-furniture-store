@@ -12,7 +12,7 @@ export default function Footer() {
         <div className="grid grid-cols-1 gap-12 sm:grid-cols-2 lg:grid-cols-4">
           <div>
             <Link to="/" className="inline-block mb-6">
-              <img src="/images/logo.webp" alt="Veenu Furnitures" className="h-24 w-auto object-contain" />
+              <img src="/images/logo_main.webp" alt="Veenu Furnitures" className="h-18 w-auto object-contain" />
             </Link>
             <p className="mb-6 text-sm leading-relaxed">
               Premium furniture and ladders from Mangalore. Trusted by families since 1984 and home to South
