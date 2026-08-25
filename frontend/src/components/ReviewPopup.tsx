@@ -35,9 +35,7 @@ export default function ReviewPopup() {
             <div className="p-4 sm:p-6 md:p-10 flex flex-col items-center text-center">
               {/* Header */}
               <div className="mb-2 mt-2 sm:mt-0">
-                <h2 className="text-3xl sm:text-4xl md:text-5xl font-serif font-bold text-red-600 tracking-wider uppercase border-t-[3px] sm:border-t-4 border-red-600 inline-block pt-1">
-                  Veenu
-                </h2>
+                <img src="/images/logo_main.webp" alt="Veenu Furnitures" className="h-20 md:h-24 w-auto object-contain" />
               </div>
               <p className="text-gray-600 text-xs sm:text-sm md:text-base font-medium mb-1">
                 Thank you for choosing Veenu Furniture!
@@ -76,7 +74,7 @@ export default function ReviewPopup() {
                     Click Here to
                   </p>
                   <p className="font-bold text-brand-900 text-sm sm:text-base uppercase leading-tight">
-                    Leave a 5-Star Review
+                    Leave a Review
                   </p>
                 </a>
 

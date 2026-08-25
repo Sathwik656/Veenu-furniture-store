@@ -128,6 +128,17 @@ export const products: Product[] = [
     link: 'https://www.flipkart.com/veenu-easy-chair-extra-wide-foldable-light-weight-rust-proof-3-years-warranty-metal-outdoor/p/itmcad8f3f2a8d28',
     features: ['Extra-wide pink fabric seat', 'Foldable & lightweight', 'Rust-proof metal frame', '3-year warranty'],
   },
+  {
+    id: '10',
+    name: 'Ironing Board',
+    category: 'Ironing Board',
+    price: 1999,
+    description:
+      'The classic Veenu easy chair in a fresh pink fabric seat. Same extra-wide comfort, foldable frame and rust-proof build — with a brighter personality.',
+    imageUrl: '/images/ironing_stand.webp',
+    link: 'https://www.flipkart.com/veenu-ironing-stand-extra-wide-attached-iron-holder-durable-3-years-warranty-board/p/itmfe7u3hvzzcyzw',
+    features: ['Extra-wide pink fabric seat', 'Foldable & lightweight', 'Rust-proof metal frame', '3-year warranty'],
+  },
 ];
 
 export const testimonials: Testimonial[] = [

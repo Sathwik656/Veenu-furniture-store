@@ -26,7 +26,7 @@ export default function Header() {
     <header className="fixed top-0 left-0 z-50 w-full bg-white/90 backdrop-blur-md border-b border-brand-200">
       <div className="container-site flex h-14 md:h-18 items-center justify-between">
         <Link to="/" aria-label="Veenu Furnitures — Home" className="flex items-center">
-          <img src="/images/logo.webp" alt="Veenu Furnitures" className="h-18 md:h-24 w-auto object-contain" />
+          <img src="/images/logo_main.webp" alt="Veenu Furnitures" className="h-6 md:h-10 w-auto object-contain" />
         </Link>
 
         <nav aria-label="Main navigation" className="hidden lg:flex items-center gap-8">
