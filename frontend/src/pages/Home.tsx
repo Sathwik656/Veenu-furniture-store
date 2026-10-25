@@ -34,7 +34,7 @@ const whyUs = [
 
 export default function Home() {
   usePageTitle(
-    'Veenu Furnitures | Furniture Shop in Mangalore',
+    'Veenu Furniture | Furniture Shop in Mangalore',
     'Buy high-quality easy chairs and aluminium step ladders from Veenu Furnitures. Trusted furniture shop in Mangalore since 1984.'
   );
   const featured = products.filter((p) => p.featured).slice(0, 6);
@@ -48,14 +48,15 @@ export default function Home() {
           alt="Veenu Furnitures living room with premium easy chairs"
           className="absolute inset-0 h-full w-full object-cover"
         />
-        <div className="absolute inset-0 bg-gradient-to-t from-brand-900/90 via-brand-900/35 to-brand-900/20" />
+        <div className="absolute inset-0 bg-linear-to-r from-brand-900/90 via-brand-900/60 to-brand-900/10" />
+        <div className="absolute inset-0 bg-linear-to-t from-brand-900/55 via-transparent to-brand-900/10" />
 
-        <div className="container-site relative pb-20 md:pb-28 pt-40">
+        <div className="container-site relative pb-16 pt-40 md:pb-24">
           <motion.p
             initial={{ opacity: 0, y: 16 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.6 }}
-            className="eyebrow mb-5 text-white/75"
+            className="eyebrow mb-6 inline-flex items-center rounded-full border border-white/20 bg-brand-900/30 px-4 py-2 text-white/90 backdrop-blur-sm"
           >
             Est. 1984 &bull; Kulur, Mangaluru
           </motion.p>
@@ -63,18 +64,20 @@ export default function Home() {
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.1 }}
-            className="max-w-3xl font-serif text-4xl leading-[1.1] text-white sm:text-5xl lg:text-6xl"
+            className="max-w-2xl font-serif text-4xl font-medium leading-[1.04] tracking-tight text-white sm:text-5xl lg:text-6xl"
           >
-            Beautiful furniture for every home.
+            Beautiful furniture
+            <br />
+            <span className="font-normal italic text-[#f0cba8]">for every home.</span>
           </motion.h1>
           <motion.p
             initial={{ opacity: 0, y: 24 }}
             animate={{ opacity: 1, y: 0 }}
             transition={{ duration: 0.7, delay: 0.25 }}
-            className="mt-6 max-w-xl text-sm md:text-base leading-relaxed text-white/80"
+            className="mt-6 max-w-lg text-sm leading-relaxed text-white/90 md:text-base"
           >
-            Premium easy chairs, ladders and more — trusted by families since 1984 and home to South
-            India&rsquo;s longest furniture showroom.
+            Premium easy chairs, ladders and more - trusted by families since 1984 and home to
+            South India&rsquo;s longest furniture showroom.
           </motion.p>
           <motion.div
             initial={{ opacity: 0, y: 24 }}
@@ -146,7 +149,7 @@ export default function Home() {
               src="/images/about.webp"
               alt="Inside the Veenu Furnitures showroom"
               loading="lazy"
-              className="aspect-[4/5] w-full object-cover"
+              className="aspect-4/5 w-full object-cover"
             />
           </motion.div>
 
