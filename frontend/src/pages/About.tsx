@@ -98,53 +98,87 @@ export default function About() {
         <div className="container-site space-y-24 md:space-y-36">
           <StoryBlock
             eyebrow="Our Origin"
-            title="It started with a simple promise."
-            image="/images/hero.webp"
-            imageAlt="Veenu Furnitures living room display"
+            title="It started with a simple promise in 1984."
+            image="/images/Showroom.jpeg"
+            imageAlt="Veenu Furnitures Showroom in Mangaluru"
           >
             <p>
-              In 1984, we opened a modest furniture shop in Kulur with one promise: honest furniture at
-              honest prices. No shortcuts, no gimmicks — just well-made products and fair dealing.
+              The story of Veenu Furnitures began over four decades ago in the coastal city of Mangaluru. In 1984,
+              we opened a modest furniture shop in Kulur with a single, unshakeable promise: to provide honest
+              furniture at honest prices. In those early days, we focused on selecting pieces that weren't
+              just beautiful, but built with the structural integrity required to withstand the test of time
+              and the humid Mangaluru climate.
             </p>
             <p>
-              More than forty years later, families who bought their first easy chair from us now bring their
-              children and grandchildren to do the same. That kind of trust is not bought; it is earned,
-              decade by decade.
+              No shortcuts, no flashy marketing gimmicks — just well-made products, fair dealing, and a
+              deep commitment to the families who walked through our doors. As our reputation for quality
+              spread across South India, so did our ambitions. We expanded our collection to include
+              specialized household utility items, becoming a trusted name for everything from
+              signature easy chairs to heavy-duty household ladders.
+            </p>
+            <p>
+              Today, more than forty years later, that foundation of trust remains our most valuable asset.
+              Families who bought their first home furnishing from us decades ago now bring their children
+              and grandchildren to our showroom. We've furnished generations of homes, and that kind of trust
+              is not something that can be bought; it is earned through consistent quality, year after year,
+              and decade after decade.
             </p>
           </StoryBlock>
 
           <StoryBlock
             eyebrow="Our Philosophy"
-            title="Quality you can feel, prices you can trust."
+            title="Quality you can feel, durability you can trust."
             image="/images/easy_1.webp"
-            imageAlt="The Veenu couples two-seat easy chair"
+            imageAlt="The Veenu classic easy chair with wooden armrest"
             reverse
           >
             <p>
-              We believe furniture should be touched before it is bought. Every product on our floor is
-              chosen for its materials, finish and comfort — then backed by warranties we stand behind.
+              We believe that furniture is an investment in your home&rsquo;s comfort and should be
+              experienced in person before it is bought. At Veenu Furnitures, we emphasize the tactile
+              nature of our products. Every item on our showroom floor has been carefully vetted for its
+              material quality, structural finish, and ergonomic comfort — then backed by warranties
+              that we stand behind without hesitation.
             </p>
             <p>
-              We are equally proud that our furniture is Made in India. Supporting local manufacturing means
-              better quality control and fairer prices for the families we serve.
+              We are equally proud that our signature products are Made in India. Supporting local
+              craftsmanship and domestic manufacturing means better quality control, faster response
+              to our customers' needs, and fairer prices for the families we serve. By choosing
+              Indian-made materials, we ensure that our furniture is tailored to the specific needs and
+              environment of our local region.
+            </p>
+            <p>
+              Whether it's the precise weave of the fabric on our easy chairs or the anti-slip grip on our
+              ISO-certified aluminium ladders, every detail is considered. Our philosophy is simple:
+              provide furniture that we would be proud to have in our own homes. This dedication to excellence
+              is why we've remained a leader in the Mangaluru furniture market for over 40 years.
             </p>
           </StoryBlock>
 
           <StoryBlock
             eyebrow="Our Showroom"
-            title="South India's longest furniture showroom."
+            title="Explore South India's longest furniture showroom."
             image="/images/7step.webp"
-            imageAlt="The classic Veenu easy chair with wooden handle"
+            imageAlt="Veenu heavy duty steel ladder display"
           >
             <p>
-              Walking through our showroom in Kulur is an experience in itself. Row after row of easy chairs,
-              ladders and household essentials stretch further than almost anywhere in South India.
+              Walking through our main showroom in Kulur is an experience that sets us apart. We take pride
+              in hosting one of South India&rsquo;s longest dedicated furniture displays — a vast space where
+              you can truly explore. Row after row of easy chairs, professional-grade ladders, and
+              essential household utilities stretch further than almost anywhere else in the region.
             </p>
             <p>
-              Come visit, sit down, and let our experienced team help you find exactly what your home needs.
+              This expansive space allows us to showcase our entire collection in a way that lets you
+              compare different models, materials, and sizes side-by-side. We encourage you to come visit,
+              take a seat, test the stability of our ladders, and feel the weight of our quality for yourself.
+            </p>
+            <p>
+              Our experienced team is always on hand to provide technical advice, share care tips, and
+              help you find exactly what your home requires. We believe in helping you choose the right
+              piece for your specific needs — ensuring that what you buy today remains a functional part
+              of your home for many years to come.
             </p>
             <Link to="/contact" className="btn-outline mt-2">
-              Plan Your Visit
+              Plan Your Showroom Visit
               <ArrowRight className="w-4 h-4" />
             </Link>
           </StoryBlock>

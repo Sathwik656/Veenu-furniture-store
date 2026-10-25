@@ -15,7 +15,6 @@ import StatsSection from '../components/StatsSection';
 import Testimonials from '../components/Testimonials';
 import SocialGallery from '../components/SocialGallery';
 import MapSection from '../components/MapSection';
-import ReviewPopup from '../components/ReviewPopup';
 import usePageTitle from '../hooks/usePageTitle';
 import { products } from '../data';
 
@@ -43,8 +42,6 @@ export default function Home() {
 
   return (
     <div className="w-full">
-      <ReviewPopup />
-
       {/* ─── HERO ─── */}
       <section className="relative flex min-h-[88vh] items-end overflow-hidden bg-brand-900">
         <img
@@ -101,27 +98,42 @@ export default function Home() {
       </section>
 
       {/* ─── INTRODUCTION ─── */}
-      <section className="bg-white py-20 md:py-32">
+      <section className="bg-white py-20 md:py-32" id="intro">
         <div className="container-site grid grid-cols-1 gap-12 lg:grid-cols-2 lg:gap-20">
           <motion.div {...fadeUp} transition={{ duration: 0.6 }}>
             <p className="eyebrow mb-4">Welcome to Veenu Furnitures</p>
-            <h2 className="font-serif text-3xl md:text-5xl leading-tight text-brand-900">
+            <h1 className="font-serif text-3xl md:text-5xl leading-tight text-brand-900">
               Furniture that feels like it was always meant for your home.
-            </h2>
+            </h1>
+            <p className="mt-8 text-sm md:text-base leading-relaxed text-brand-800/80">
+              At Veenu Furnitures, we don't just sell furniture; we provide the comfort your home deserves.
+              Since 1984, we have dedicated ourselves to sourcing, crafting, and delivering high-quality
+              furniture that combines traditional aesthetics with modern durability. Whether you are
+              furnishing a new apartment, upgrading your balcony, or looking for practical household
+              tools like our signature aluminium ladders, we are here to guide you with decades of expertise.
+            </p>
             <Link to="/about" className="btn-outline mt-10">
-              Read More
+              Read Our Full Story
               <ArrowRight className="w-4 h-4" />
             </Link>
           </motion.div>
 
           <motion.div {...fadeUp} transition={{ duration: 0.6, delay: 0.15 }} className="space-y-6 self-center">
             <p className="text-sm md:text-base leading-relaxed text-brand-800/80">
-              VEENU FURNITURES has been a trusted brand since 1984. Home to South India&rsquo;s longest
-              furniture showroom, we offer quality, service, and proudly Made-in-India furniture.
+              VEENU FURNITURES has been a trusted brand in Mangaluru for over 40 years. As the home of
+              South India&rsquo;s longest furniture showroom, we offer an unparalleled variety of
+              quality, service, and proudly Made-in-India products. We prioritize transparency and
+              honesty, ensuring that every purchase you make is backed by our comprehensive warranty
+              and commitment to lasting value.
             </p>
             <p className="text-sm md:text-base leading-relaxed text-brand-800/80">
-              From plush easy chairs to sturdy household ladders, our expertly crafted pieces combine style,
-              comfort, and lasting durability — the kind you pass down, not replace.
+              Our range of easy chairs, designed for ultimate relaxation, are crafted with premium
+              materials that resist wear and tear while providing ergonomic support. Complementing these,
+              our ISO-certified step ladders are built with heavy-duty steel and aluminium,
+              focusing on safety features that offer peace of mind during everyday tasks. From
+              ergonomically designed office chairs to cosy outdoor loungers and durable home utility items,
+              our collection evolves to meet your changing needs while maintaining the same
+              dedication to quality that our founders established in 1984.
             </p>
           </motion.div>
         </div>
@@ -195,9 +207,6 @@ export default function Home() {
 
       {/* ─── TESTIMONIALS ─── */}
       <Testimonials />
-
-      {/* ─── SOCIAL ─── */}
-      <SocialGallery />
 
       {/* ─── VISIT US ─── */}
       <section className="bg-white py-20 md:py-28">

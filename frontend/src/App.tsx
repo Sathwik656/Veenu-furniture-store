@@ -13,7 +13,10 @@ import NewsArticle from './pages/NewsArticle';
 import Contact from './pages/Contact';
 import PrivacyPolicy from './pages/PrivacyPolicy';
 import Terms from './pages/Terms';
+import Disclaimer from './pages/Disclaimer';
+import Sitemap from './pages/Sitemap';
 import NotFound from './pages/NotFound';
+import CookieConsent from './components/CookieConsent';
 
 function ScrollToTop() {
   const { pathname } = useLocation();
@@ -42,10 +45,13 @@ export default function App() {
             <Route path="/contact" element={<Contact />} />
             <Route path="/privacy-policy" element={<PrivacyPolicy />} />
             <Route path="/terms" element={<Terms />} />
+            <Route path="/disclaimer" element={<Disclaimer />} />
+            <Route path="/sitemap" element={<Sitemap />} />
             <Route path="*" element={<NotFound />} />
           </Routes>
         </main>
         <Footer />
+        <CookieConsent />
         <WhatsAppButton />
       </div>
     </MotionConfig>
