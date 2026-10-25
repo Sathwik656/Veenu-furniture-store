@@ -13,7 +13,6 @@ import ProductCard from '../components/ProductCard';
 import SectionHeading from '../components/SectionHeading';
 import StatsSection from '../components/StatsSection';
 import Testimonials from '../components/Testimonials';
-import SocialGallery from '../components/SocialGallery';
 import MapSection from '../components/MapSection';
 import usePageTitle from '../hooks/usePageTitle';
 import { products } from '../data';
